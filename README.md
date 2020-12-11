@@ -1,3 +1,7 @@
+该部分是位姿系统的RTK驱动部分，主要功能是作为clap b7的ros驱动读取并解析clap b7
+的rtk定位数据，并在ros中发布rtk定位结果的topic
+
+
 NovAtel GPS Driver
 ![CI](https://github.com/swri-robotics/novatel_gps_driver/workflows/CI/badge.svg)
 ==================
