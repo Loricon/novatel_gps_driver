@@ -177,7 +177,7 @@ namespace novatel_gps_driver
     NovatelGpsNodelet() :
       device_(""),
       connection_type_("serial"),
-      serial_baud_(115200),
+      serial_baud_(460800),
       polling_period_(0.05),
       publish_gpgsa_(false),
       publish_gpgsv_(false),
