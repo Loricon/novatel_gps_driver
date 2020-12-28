@@ -49,7 +49,7 @@ namespace novatel_gps_driver
       is_connected_(false),
       imu_rate_forced_(false),
       utc_offset_(0),
-      serial_baud_(115200),
+      serial_baud_(460800),
       tcp_socket_(io_service_),
       pcap_(nullptr),
       clocksteering_msgs_(MAX_BUFFER_SIZE),
