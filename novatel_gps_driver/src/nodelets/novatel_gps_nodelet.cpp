@@ -278,9 +278,9 @@ namespace novatel_gps_driver
 
       sync_sub_ = swri::Subscriber(node, "gps_sync", 100, &NovatelGpsNodelet::SyncCallback, this);
 
-      std::string gps_topic = node.resolveName("gps");
-      gps_pub_ = swri::advertise<gps_common::GPSFix>(node, gps_topic, 100);
-      fix_pub_ = swri::advertise<sensor_msgs::NavSatFix>(node, "fix", 100);
+     // std::string gps_topic = node.resolveName("gps");
+     // gps_pub_ = swri::advertise<gps_common::GPSFix>(node, gps_topic, 100);
+     // fix_pub_ = swri::advertise<sensor_msgs::NavSatFix>(node, "fix", 100);
 
       if (publish_clock_steering_)
       {
@@ -302,10 +302,10 @@ namespace novatel_gps_driver
       {
         imu_pub_ = swri::advertise<sensor_msgs::Imu>(node, "imu", 100);
         novatel_imu_pub_= swri::advertise<novatel_gps_msgs::NovatelCorrectedImuData>(node, "corrimudata", 100);
-        insstdev_pub_ = swri::advertise<novatel_gps_msgs::Insstdev>(node, "insstdev", 100);
-        inspva_pub_ = swri::advertise<novatel_gps_msgs::Inspva>(node, "inspva", 100);
+      //  insstdev_pub_ = swri::advertise<novatel_gps_msgs::Insstdev>(node, "insstdev", 100);
+     //   inspva_pub_ = swri::advertise<novatel_gps_msgs::Inspva>(node, "inspva", 100);
         inspvax_pub_ = swri::advertise<novatel_gps_msgs::Inspvax>(node, "inspvax", 100);
-        inscov_pub_ = swri::advertise<novatel_gps_msgs::Inscov>(node, "inscov", 100);
+      //  inscov_pub_ = swri::advertise<novatel_gps_msgs::Inscov>(node, "inscov", 100);
       }
 
       if (publish_gpgsv_)
