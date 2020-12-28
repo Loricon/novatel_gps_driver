@@ -63,11 +63,10 @@ Then create a `.launch` file and configure it as desired:
         args="standalone novatel_gps_driver/novatel_gps_nodelet">
     <rosparam>
       connection_type: serial
-      device: /dev/ttyS0
+      device: /dev/ttyUSB0
+      imu_sample_rate: 20
+      publish_imu_messages: true
       frame_id: /gps
-      publish_novatel_velocity: true
-      publish_novatel_positions: true
-      publish_novatel_psrdop2: true
     </rosparam>
   </node>
 </launch>
